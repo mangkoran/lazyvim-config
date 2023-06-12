@@ -1,0 +1,21 @@
+return {
+  -- {
+  --   "nvimdev/lspsaga.nvim",
+  --   event = "LspAttach",
+  --   config = function()
+  --     require("lspsaga").setup({})
+  --   end,
+  --   dependencies = {
+  --     { "nvim-tree/nvim-web-devicons" },
+  --     --Please make sure you install markdown and markdown_inline parser
+  --     { "nvim-treesitter/nvim-treesitter" },
+  --   },
+  -- },
+  -- auto completion
+  -- {
+  --   "L3MON4D3/LuaSnip",
+  --   config = function()
+  --     require("luasnip.loaders.from_vscode").lazy_load({ paths = { "~/.config/nvim/snippets" } })
+  --   end,
+  -- },
+}
