@@ -20,9 +20,7 @@ return {
       servers = {
         ansiblels = {},
         astro = {},
-        ccls = {},
         html = {},
-        pyright = {},
         sqlls = {},
         svelte = {},
         terraformls = {},
@@ -37,7 +35,6 @@ return {
       },
     },
   },
-
   {
     "jose-elias-alvarez/null-ls.nvim",
     opts = function()
@@ -49,14 +46,56 @@ return {
           nls.builtins.diagnostics.fish,
           nls.builtins.formatting.shfmt,
           nls.builtins.formatting.stylua,
-          -- nls.builtins.diagnostics.flake8,
         },
       }
     end,
   },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = function(_, opts)
+      if type(opts.ensure_installed) == "table" then
+        vim.list_extend(opts.ensure_installed, {
+          "astro",
+          "css",
+          "fish",
+          "gitignore",
+          "make",
+          "scss",
+          "sql",
+          "svelte",
+          -- "bash",
+          -- "c",
+          -- "html",
+          -- "javascript",
+          -- "json",
+          -- "lua",
+          -- "luadoc",
+          -- "luap",
+          -- "markdown",
+          -- "markdown_inline",
+          -- "python",
+          -- "query",
+          -- "regex",
+          -- "tsx",
+          -- "typescript",
+          -- "vim",
+          -- "vimdoc",
+          -- "yaml",
+        })
+      end
+    end,
+  },
+
+  -- built-in LazyVim extras
+  { import = "lazyvim.plugins.extras.lang.go" },
+  { import = "lazyvim.plugins.extras.lang.rust" },
+  { import = "lazyvim.plugins.extras.lang.clangd" },
+  { import = "lazyvim.plugins.extras.lang.python" },
 
   -- custom language specific extension modules
-  { import = "plugins.extras.lang.rust" },
-  { import = "plugins.extras.lang.golang" },
+  -- { import = "plugins.extras.lang.go" },
   { import = "plugins.extras.lang.latex" },
+  -- { import = "plugins.extras.lang.python" },
+  { import = "plugins.extras.lang.typst" },
+  { import = "plugins.extras.lang.markdown" },
 }

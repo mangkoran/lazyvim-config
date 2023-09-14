@@ -31,12 +31,14 @@ opt.cursorline = true
 opt.cursorcolumn = true
 -- opt.clipboard:append({ "unnamed", "unnamedplus" })
 opt.clipboard:append({ "unnamedplus" })
-
 opt.conceallevel = 2
+opt.mouse = ""
 
 -- opt.textwidth = 100
-
 vim.filetype.add({
+  extension = {
+    typ = "typst",
+  },
   pattern = {
     [".*.ansible.yaml"] = "yaml.ansible",
     [".*/tasks/.*.yaml"] = "yaml.ansible",

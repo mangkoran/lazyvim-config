@@ -19,29 +19,35 @@ return {
     end,
   },
 
-  -- CamelCase, snake_case, etc.
-  -- VimScript
-  -- {
-  --   "chaoren/vim-wordmotion",
-  --   event = "VeryLazy"
-  --   -- opts = {},
-  -- },
-
-  -- {
-  --   "windwp/nvim-autopairs",
-  --   event = "InsertEnter",
-  --   opts = {},
-  -- },
-
   -- Lua CamelCase, snake_case, etc.
   {
     "chrisgrieser/nvim-spider",
-    event = "VeryLazy",
-    config = function()
-      vim.keymap.set({ "n", "o", "x" }, "w", "<cmd>lua require('spider').motion('w')<CR>", { desc = "Spider-w" })
-      vim.keymap.set({ "n", "o", "x" }, "e", "<cmd>lua require('spider').motion('e')<CR>", { desc = "Spider-e" })
-      vim.keymap.set({ "n", "o", "x" }, "b", "<cmd>lua require('spider').motion('b')<CR>", { desc = "Spider-b" })
-      vim.keymap.set({ "n", "o", "x" }, "ge", "<cmd>lua require('spider').motion('ge')<CR>", { desc = "Spider-ge" })
-    end
+    -- event = "VeryLazy",
+    -- config = function()
+    --   vim.keymap.set({ "n", "o", "x" }, "w", "<cmd>lua require('spider').motion('w')<CR>", { desc = "Spider-w" })
+    --   vim.keymap.set({ "n", "o", "x" }, "e", "<cmd>lua require('spider').motion('e')<CR>", { desc = "Spider-e" })
+    --   vim.keymap.set({ "n", "o", "x" }, "b", "<cmd>lua require('spider').motion('b')<CR>", { desc = "Spider-b" })
+    --   vim.keymap.set({ "n", "o", "x" }, "ge", "<cmd>lua require('spider').motion('ge')<CR>", { desc = "Spider-ge" })
+    -- end,
+    keys = {
+      { "w", "<cmd>lua require('spider').motion('w')<CR>", mode = { "n", "o", "x", "v" }, desc = "Spider-w" },
+      { "e", "<cmd>lua require('spider').motion('e')<CR>", mode = { "n", "o", "x", "v" }, desc = "Spider-e" },
+      { "b", "<cmd>lua require('spider').motion('b')<CR>", mode = { "n", "o", "x", "v" }, desc = "Spider-b" },
+      { "ge", "<cmd>lua require('spider').motion('ge')<CR>", mode = { "n", "o", "x", "v" }, desc = "Spider-ge" },
+    },
+  },
+
+  -- TextObjs
+  {
+    "chrisgrieser/nvim-various-textobjs",
+    -- event = "VeryLazy",
+    -- config = function()
+    --   vim.keymap.set({ "o", "x" }, "aw", '<cmd>lua require("various-textobjs").subword(false)<CR>')
+    --   vim.keymap.set({ "o", "x" }, "iw", '<cmd>lua require("various-textobjs").subword(true)<CR>')
+    -- end,
+    keys = {
+      { "aw", "<cmd>lua require('various-textobjs').subword(false)<CR>", mode = { "o", "x" }, desc = "Subword-aw" },
+      { "iw", "<cmd>lua require('various-textobjs').subword(true)<CR>", mode = { "o", "x" }, desc = "Subword-iw" },
+    },
   },
 }

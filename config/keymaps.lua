@@ -16,7 +16,9 @@ end
 
 map("i", "jk", "<Esc>")
 map("i", "kj", "<Esc>")
-map("n", "<leader>fs", "<cmd>w<cr><esc>", { desc = "Save file" })
+
+map("n", "<Leader>fs", "<Cmd>w<CR>", { desc = "Save file" })
+map("n", "<Leader>br", "<Cmd>e<CR>", { desc = "Reload buffer" })
 
 -- LSP finder - Find the symbol's definition
 -- If there is no definition, it will instead be hidden
