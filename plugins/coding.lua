@@ -49,5 +49,6 @@ return {
       { "aw", "<cmd>lua require('various-textobjs').subword(false)<CR>", mode = { "o", "x" }, desc = "Subword-aw" },
       { "iw", "<cmd>lua require('various-textobjs').subword(true)<CR>", mode = { "o", "x" }, desc = "Subword-iw" },
     },
+    { "f-person/git-blame.nvim" },
   },
 }
