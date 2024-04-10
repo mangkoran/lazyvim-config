@@ -1,9 +1,8 @@
 return {
   {
-    "rcarriga/nvim-notify",
+    "LazyVim/LazyVim",
     opts = {
-      fps = 60,
-      stages = "fade",
+      colorscheme = "catppuccin",
     },
   },
 }
