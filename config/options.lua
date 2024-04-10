@@ -23,7 +23,7 @@ opt.ignorecase = true -- Ignore case
 opt.number = true -- Print line number
 -- opt.pumblend = 10 -- Popup blend
 -- opt.pumheight = 10 -- Maximum number of entries in a popup
--- opt.relativenumber = true -- Relative line numbers
+opt.relativenumber = false -- Relative line numbers
 opt.scrolloff = 727 -- Lines of context
 -- opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize", "help", "globals", "skiprtp", "folds" }
 -- opt.shiftround = true -- Round indent
@@ -66,3 +66,5 @@ opt.smartindent = true -- Insert indents automatically
 
 -- Fix markdown indentation settings
 -- vim.g.markdown_recommended_style = 0
+
+require("config.filetype")
