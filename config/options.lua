@@ -31,7 +31,7 @@ opt.cursorline = true
 opt.cursorcolumn = true
 -- opt.clipboard:append({ "unnamed", "unnamedplus" })
 opt.clipboard:append({ "unnamedplus" })
-opt.conceallevel = 2
+-- opt.conceallevel = 2
 opt.mouse = ""
 
 -- opt.textwidth = 100
