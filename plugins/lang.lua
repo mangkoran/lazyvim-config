@@ -22,4 +22,5 @@ return {
 
   { import = "plugins.lang.neorg" },
   { import = "plugins.lang.typst" },
+  { import = "plugins.lang.web" },
 }
