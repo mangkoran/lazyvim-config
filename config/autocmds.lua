@@ -10,7 +10,8 @@ vim.api.nvim_create_autocmd("FileType", {
   group = augroup("textwidth"),
   pattern = {
     "markdown",
-    "typst",
+    -- "typst",
+    "norg",
   },
   callback = function()
     vim.opt_local.textwidth = 80
