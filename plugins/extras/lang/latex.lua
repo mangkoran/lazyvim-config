@@ -77,34 +77,34 @@ return {
       { "<Leader>cc", "<Cmd>TexlabBuild<CR>", desc = "Texlab Build" },
     },
   },
-  {
-    "nvimtools/none-ls.nvim",
-    dependencies = { -- optional packages
-      "LazyVim/LazyVim",
-    },
-    init = function()
-      -- https://github.com/jose-elias-alvarez/null-ls.nvim/issues/1131#issuecomment-1457584752
-      require("lazyvim.util").on_attach(function(client, buf)
-        if client.name == "null-ls" then
-          if
-            not require("null-ls.generators").can_run(vim.bo[buf].filetype, require("null-ls.methods").lsp.FORMATTING)
-          then
-            vim.bo[buf].formatexpr = nil
-          end
-        end
-      end)
-    end,
-    opts = function(_, opts)
-      local nls = require("null-ls")
-      if type(opts.sources) == "table" then
-        vim.list_extend(opts.sources, {
-          -- nls.builtins.diagnostics.proselint,
-          nls.builtins.diagnostics.chktex,
-          -- nls.builtins.diagnostics.vale,
-        })
-      end
-    end,
-  },
+  -- {
+  --   "nvimtools/none-ls.nvim",
+  --   dependencies = { -- optional packages
+  --     "LazyVim/LazyVim",
+  --   },
+  --   init = function()
+  --     -- https://github.com/jose-elias-alvarez/null-ls.nvim/issues/1131#issuecomment-1457584752
+  --     require("lazyvim.util").on_attach(function(client, buf)
+  --       if client.name == "null-ls" then
+  --         if
+  --           not require("null-ls.generators").can_run(vim.bo[buf].filetype, require("null-ls.methods").lsp.FORMATTING)
+  --         then
+  --           vim.bo[buf].formatexpr = nil
+  --         end
+  --       end
+  --     end)
+  --   end,
+  --   opts = function(_, opts)
+  --     local nls = require("null-ls")
+  --     if type(opts.sources) == "table" then
+  --       vim.list_extend(opts.sources, {
+  --         -- nls.builtins.diagnostics.proselint,
+  --         nls.builtins.diagnostics.chktex,
+  --         -- nls.builtins.diagnostics.vale,
+  --       })
+  --     end
+  --   end,
+  -- },
   -- {
   --   "lervag/vimtex",
   --   init = function()
