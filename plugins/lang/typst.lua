@@ -39,8 +39,6 @@ return {
         pattern = { "typst" },
         callback = function()
           vim.opt_local.commentstring = "// %s"
-          vim.opt_local.textwidth = 80
-          vim.opt_local.formatexpr = ""
         end,
       })
     end,
@@ -56,7 +54,11 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        typst_lsp = {},
+        typst_lsp = {
+          settings = {
+            exportPdf = "never",
+          },
+        },
       },
     },
   },

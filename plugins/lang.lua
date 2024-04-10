@@ -1,4 +1,13 @@
 return {
-  { import = "plugins.lang.typst" },
+  {
+    "IndianBoy42/tree-sitter-just",
+    opts = {},
+  },
+  {
+    "pcolladosoto/tinygo.nvim",
+    opts = {},
+  },
+
   { import = "plugins.lang.neorg" },
+  { import = "plugins.lang.typst" },
 }
