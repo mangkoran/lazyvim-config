@@ -21,6 +21,7 @@ return {
         "biome",
         "css-lsp",
         "html-lsp",
+        "prettierd",
         "astro-language-server",
         "svelte-language-server",
         "typescript-language-server",

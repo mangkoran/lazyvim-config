@@ -7,4 +7,7 @@ return {
       },
     },
   },
+  {
+    "sindrets/diffview.nvim",
+  },
 }
