@@ -1,4 +1,4 @@
 return {
-  { "echasnovski/mini.indentscope", enabled = false },
+  -- { "echasnovski/mini.indentscope", enabled = false },
   -- { "stevearc/conform.nvim", enabled = false },
 }
