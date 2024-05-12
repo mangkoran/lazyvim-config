@@ -14,7 +14,7 @@ return {
   -- },
   {
     "pcolladosoto/tinygo.nvim",
-    opts = {},
+    event = "VeryLazy",
   },
   -- {
   --   "creativenull/efmls-configs-nvim",
