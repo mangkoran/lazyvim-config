@@ -17,12 +17,12 @@
 -- })
 
 return {
-  {
-    "nvimdev/dashboard-nvim",
-    -- dir = "~/repos/fork/dashboard-nvim",
-    lazy = false,
-    -- priority = 1000,
-    -- commit = "354e7bd0ad62f6e8b5ab9394b1ec7dbcaaa1470c",
-    -- enabled = false
-  },
+  -- {
+  --   "nvimdev/dashboard-nvim",
+  --   -- dir = "~/repos/fork/dashboard-nvim",
+  --   lazy = false,
+  --   -- priority = 1000,
+  --   -- commit = "354e7bd0ad62f6e8b5ab9394b1ec7dbcaaa1470c",
+  --   -- enabled = false
+  -- },
 }

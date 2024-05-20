@@ -34,15 +34,15 @@ return {
   --   },
   -- },
 
-  {
-    "echasnovski/mini.indentscope",
-    opts = {
-      draw = {
-        animation = require("mini.indentscope").gen_animation.none(),
-      },
-      symbol = "┃", -- a bit thicker than default "│"
-    },
-  },
+  -- {
+  --   "echasnovski/mini.indentscope",
+  --   opts = {
+  --     draw = {
+  --       animation = require("mini.indentscope").gen_animation.none(),
+  --     },
+  --     symbol = "┃", -- a bit thicker than default "│"
+  --   },
+  -- },
   {
     "LazyVim/LazyVim",
     opts = {
