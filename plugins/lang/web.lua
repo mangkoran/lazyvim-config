@@ -1,3 +1,11 @@
+vim.filetype.add({
+  extension = {
+    njk = "nunjucks",
+  },
+})
+
+vim.treesitter.language.register("htmldjango", "nunjucks") -- the someft filetype will use the python parser and queries.
+
 return {
   {
     "nvim-treesitter/nvim-treesitter",
@@ -8,6 +16,7 @@ return {
         "html",
         "astro",
         "svelte",
+        "htmldjango",
         "javascript",
         "typescript",
       })
@@ -19,9 +28,9 @@ return {
       opts.ensure_installed = opts.ensure_installed or {}
       vim.list_extend(opts.ensure_installed, {
         "biome",
+        "djlint",
         "css-lsp",
         "html-lsp",
-        "prettierd",
         "astro-language-server",
         "svelte-language-server",
         "typescript-language-server",
@@ -41,6 +50,31 @@ return {
         },
         svelte = {},
         tsserver = {},
+      },
+      setup = {
+        html = function(_, opts)
+          local html = require("lspconfig.server_configurations.html")
+          opts.filetypes = opts.filetypes or {}
+          vim.list_extend(opts.filetypes, html.default_config.filetypes)
+          vim.list_extend(opts.filetypes, { "nunjucks" })
+        end,
+      },
+    },
+  },
+  {
+    "stevearc/conform.nvim",
+    opts = {
+      formatters_by_ft = {
+        nunjucks = { "djlint" },
+      },
+      formatters = {
+        djlint = {
+          args = function(_, ctx)
+            -- use tabstop of current buffer which is based on .editorconfig
+            local indent = vim.bo[ctx.buf].tabstop or 4
+            return { "-", "--reformat", "--indent", indent }
+          end,
+        },
       },
     },
   },
