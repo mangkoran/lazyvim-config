@@ -4,3 +4,6 @@
 
 vim.keymap.set("i", "jk", "<Esc>")
 vim.keymap.set("i", "kj", "<Esc>")
+
+-- vim.keymap.set("n", "<Leader>fs", "<Cmd>w<CR>", { desc = "Save file" })
+-- vim.keymap.set("n", "<Leader>br", "<Cmd>e<CR>", { desc = "Reload buffer" })
