@@ -53,7 +53,7 @@ return {
       },
       setup = {
         html = function(_, opts)
-          local html = require("lspconfig.server_configurations.html")
+          local html = require("lspconfig.configs.html")
           opts.filetypes = opts.filetypes or {}
           vim.list_extend(opts.filetypes, html.default_config.filetypes)
           vim.list_extend(opts.filetypes, { "nunjucks" })
