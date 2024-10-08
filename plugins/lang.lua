@@ -10,6 +10,7 @@ return {
       vim.list_extend(opts.ensure_installed, {
         "hcl",
         "just",
+        "terraform",
         "htmldjango",
       })
     end,
