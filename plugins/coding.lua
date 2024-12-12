@@ -22,7 +22,7 @@ return {
       })
     end,
   },
-  --- Subword motion
+  -- Subword motion
   {
     "chrisgrieser/nvim-spider",
     keys = {
