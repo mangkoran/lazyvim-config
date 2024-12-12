@@ -9,9 +9,8 @@ vim.treesitter.language.register("htmldjango", "nunjucks") -- the someft filetyp
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    opts = function(_, opts)
-      opts.ensure_installed = opts.ensure_installed or {}
-      vim.list_extend(opts.ensure_installed, {
+    opts = {
+      ensure_installed = {
         "css",
         "html",
         "astro",
@@ -19,14 +18,13 @@ return {
         "htmldjango",
         "javascript",
         "typescript",
-      })
-    end,
+      },
+    },
   },
   {
     "williamboman/mason.nvim",
-    opts = function(_, opts)
-      opts.ensure_installed = opts.ensure_installed or {}
-      vim.list_extend(opts.ensure_installed, {
+    opts = {
+      ensure_installed = {
         "biome",
         "djlint",
         "css-lsp",
@@ -34,8 +32,8 @@ return {
         "astro-language-server",
         "svelte-language-server",
         "typescript-language-server",
-      })
-    end,
+      },
+    },
   },
   {
     "neovim/nvim-lspconfig",
