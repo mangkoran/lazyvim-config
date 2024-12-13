@@ -49,4 +49,15 @@ return {
       colorscheme = "catppuccin",
     },
   },
+  {
+    "folke/snacks.nvim",
+    opts = {
+      scroll = {
+        animate = {
+          duration = { step = 100 },
+          easing = "outQuint",
+        },
+      },
+    },
+  },
 }
