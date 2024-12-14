@@ -14,6 +14,14 @@ return {
       },
     },
   },
+  {
+    "folke/ts-comments.nvim",
+    opts = {
+      lang = {
+        just = "# %s",
+      },
+    },
+  },
 
   { import = "plugins.lang.neorg" },
   { import = "plugins.lang.typst" },

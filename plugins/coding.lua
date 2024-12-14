@@ -40,12 +40,4 @@ return {
       { "iw", "<cmd>lua require('various-textobjs').subword(true)<CR>", mode = { "o", "x" }, desc = "Subword-iw" },
     },
   },
-  {
-    "folke/ts-comments.nvim",
-    opts = {
-      lang = {
-        just = "# %s",
-      },
-    },
-  },
 }
