@@ -53,10 +53,11 @@ return {
     "folke/snacks.nvim",
     opts = {
       scroll = {
-        animate = {
-          duration = { step = 100 },
-          easing = "outQuint",
-        },
+        enabled = false,
+        -- animate = {
+        --   duration = { step = 180 },
+        --   easing = "outQuint",
+        -- },
       },
     },
   },
