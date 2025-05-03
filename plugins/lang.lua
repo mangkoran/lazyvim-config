@@ -7,20 +7,27 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
-        "hcl",
+        -- "hcl",
         "just",
         -- "terraform",
         "htmldjango",
+        "hurl",
       },
     },
   },
+  -- {
+  --   "folke/ts-comments.nvim",
+  --   opts = {
+  --     lang = {
+  --       just = "# %s",
+  --     },
+  --   },
+  -- },
   {
-    "folke/ts-comments.nvim",
-    opts = {
-      lang = {
-        just = "# %s",
-      },
-    },
+    "iamcco/markdown-preview.nvim",
+    init = function()
+      vim.g.mkdp_browser = "/usr/bin/wslview"
+    end,
   },
 
   -- { import = "plugins.lang.neorg" },
