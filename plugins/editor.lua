@@ -32,4 +32,19 @@ return {
   --     -- { "<leader>sB", "<cmd>Telescope current_buffer_fuzzy_find fuzzy=false<cr>", desc = "Buffer (grep)" },
   --   },
   -- },
+  {
+    "folke/snacks.nvim",
+    opts = {
+      picker = {
+        hidden = true,
+        ignored = true,
+        sources = {
+          files = {
+            hidden = true,
+            ignored = true,
+          },
+        },
+      },
+    },
+  },
 }
