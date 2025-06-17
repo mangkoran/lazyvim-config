@@ -33,6 +33,23 @@ return {
   -- { "mason-org/mason.nvim", version = "^1.0.0" },
   -- { "mason-org/mason-lspconfig.nvim", version = "^1.0.0" },
 
+  {
+    "mrcjkb/rustaceanvim",
+    opts = {
+      server = {
+        default_settings = {
+          ["rust-analyzer"] = {
+            procMacro = {
+              ignored = {
+                ["async-trait"] = {},
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+
   -- { import = "plugins.lang.neorg" },
   { import = "plugins.lang.typst" },
   { import = "plugins.lang.web" },
