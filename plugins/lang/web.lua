@@ -9,6 +9,7 @@ vim.treesitter.language.register("htmldjango", "nunjucks") -- the someft filetyp
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+    optional = true,
     opts = {
       ensure_installed = {
         "css",
@@ -23,6 +24,7 @@ return {
   },
   {
     "williamboman/mason.nvim",
+    optional = true,
     opts = {
       ensure_installed = {
         "biome",
@@ -37,6 +39,7 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
+    optional = true,
     opts = {
       servers = {
         astro = {},
@@ -61,6 +64,7 @@ return {
   },
   {
     "stevearc/conform.nvim",
+    optional = true,
     opts = {
       formatters_by_ft = {
         nunjucks = { "djlint" },

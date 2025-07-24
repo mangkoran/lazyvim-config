@@ -11,14 +11,17 @@ vim.filetype.add({
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+    optional = true,
     opts = { ensure_installed = { "typst" } },
   },
   {
     "williamboman/mason.nvim",
+    optional = true,
     opts = { ensure_installed = { "typst-lsp" } },
   },
   {
     "neovim/nvim-lspconfig",
+    optional = true,
     opts = {
       servers = {
         typst_lsp = {
@@ -31,6 +34,7 @@ return {
   },
   {
     "stevearc/conform.nvim",
+    optional = true,
     opts = {
       formatters_by_ft = {
         typst = { "typstfmt" },
@@ -39,6 +43,7 @@ return {
   },
   {
     "folke/ts-comments.nvim",
+    optional = true,
     opts = {
       lang = {
         typst = "// %s",

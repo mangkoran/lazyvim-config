@@ -5,6 +5,7 @@ return {
   },
   {
     "nvim-treesitter/nvim-treesitter",
+    optional = true,
     opts = {
       ensure_installed = {
         -- "hcl",
@@ -25,6 +26,7 @@ return {
   -- },
   {
     "iamcco/markdown-preview.nvim",
+    optional = true,
     init = function()
       vim.g.mkdp_browser = "/usr/bin/wslview"
     end,
@@ -35,6 +37,7 @@ return {
 
   {
     "mrcjkb/rustaceanvim",
+    optional = true,
     opts = {
       server = {
         default_settings = {

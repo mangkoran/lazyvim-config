@@ -1,6 +1,7 @@
 return {
   {
     "lewis6991/gitsigns.nvim",
+    optional = true,
     opts = {
       current_line_blame_opts = {
         delay = 0,
@@ -34,6 +35,7 @@ return {
   -- },
   {
     "folke/snacks.nvim",
+    optional = true,
     opts = {
       picker = {
         hidden = true,

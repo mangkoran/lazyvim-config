@@ -45,12 +45,14 @@ return {
   -- },
   {
     "LazyVim/LazyVim",
+    optional = true,
     opts = {
       colorscheme = "catppuccin",
     },
   },
   {
     "folke/snacks.nvim",
+    optional = true,
     opts = {
       scroll = {
         enabled = false,
