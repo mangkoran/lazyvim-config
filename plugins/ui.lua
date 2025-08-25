@@ -11,7 +11,7 @@
 return {
   {
     "catppuccin/nvim",
-    name = "catppuccin",
+    optional = true,
     opts = {
       integrations = {
         -- indent_blankline = {
@@ -25,6 +25,14 @@ return {
         },
       },
     },
+  },
+  {
+    "catppuccin/nvim",
+    optional = true,
+    opts = function()
+      local bufferline = require("catppuccin.groups.integrations.bufferline")
+      bufferline.get = bufferline.get or bufferline.get_theme
+    end,
   },
   -- {
   --   "lukas-reineke/indent-blankline.nvim",
