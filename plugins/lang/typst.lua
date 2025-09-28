@@ -17,18 +17,14 @@ return {
   {
     "mason-org/mason.nvim",
     optional = true,
-    opts = { ensure_installed = { "typst-lsp" } },
+    opts = { ensure_installed = { "tinymist" } },
   },
   {
     "neovim/nvim-lspconfig",
     optional = true,
     opts = {
       servers = {
-        typst_lsp = {
-          settings = {
-            exportPdf = "never",
-          },
-        },
+        tinymist = {},
       },
     },
   },
@@ -37,17 +33,17 @@ return {
     optional = true,
     opts = {
       formatters_by_ft = {
-        typst = { "typstfmt" },
+        typst = { "typstyle" },
       },
     },
   },
-  {
-    "folke/ts-comments.nvim",
-    optional = true,
-    opts = {
-      lang = {
-        typst = "// %s",
-      },
-    },
-  },
+  -- {
+  --   "folke/ts-comments.nvim",
+  --   optional = true,
+  --   opts = {
+  --     lang = {
+  --       typst = "// %s",
+  --     },
+  --   },
+  -- },
 }
