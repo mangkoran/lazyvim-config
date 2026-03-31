@@ -9,23 +9,23 @@
 -- }
 
 return {
-  {
-    "catppuccin/nvim",
-    optional = true,
-    opts = {
-      integrations = {
-        -- indent_blankline = {
-        --   enabled = true,
-        --   scope_color = "lavender", -- catppuccin color (eg. `lavender`) Default: text
-        --   colored_indent_levels = true,
-        -- },
-        mini = {
-          enabled = true,
-          indentscope_color = "overlay0",
-        },
-      },
-    },
-  },
+  -- {
+  --   "catppuccin/nvim",
+  --   optional = true,
+  --   opts = {
+  --     integrations = {
+  --       -- indent_blankline = {
+  --       --   enabled = true,
+  --       --   scope_color = "lavender", -- catppuccin color (eg. `lavender`) Default: text
+  --       --   colored_indent_levels = true,
+  --       -- },
+  --       mini = {
+  --         enabled = true,
+  --         indentscope_color = "overlay0",
+  --       },
+  --     },
+  --   },
+  -- },
   -- {
   --   "catppuccin/nvim",
   --   optional = true,
@@ -55,7 +55,7 @@ return {
     "LazyVim/LazyVim",
     optional = true,
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "catppuccin-nvim",
     },
   },
   {
