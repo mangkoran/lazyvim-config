@@ -58,17 +58,17 @@ return {
       colorscheme = "catppuccin-nvim",
     },
   },
-  {
-    "folke/snacks.nvim",
-    optional = true,
-    opts = {
-      scroll = {
-        enabled = false,
-        -- animate = {
-        --   duration = { step = 180 },
-        --   easing = "outQuint",
-        -- },
-      },
-    },
-  },
+  -- {
+  --   "folke/snacks.nvim",
+  --   optional = true,
+  --   opts = {
+  --     scroll = {
+  --       enabled = false,
+  --       -- animate = {
+  --       --   duration = { step = 180 },
+  --       --   easing = "outQuint",
+  --       -- },
+  --     },
+  --   },
+  -- },
 }

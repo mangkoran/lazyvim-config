@@ -37,6 +37,9 @@ return {
     "folke/snacks.nvim",
     optional = true,
     opts = {
+      scroll = {
+        enabled = false,
+      },
       picker = {
         hidden = true,
         ignored = true,
